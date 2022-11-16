@@ -7,6 +7,8 @@
         "sched.h": "c",
         "signal.h": "c",
         "mm.h": "c",
-        "segment.h": "c"
+        "segment.h": "c",
+        "string.h": "c",
+        "stat.h": "c"
     }
 }
