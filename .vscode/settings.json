@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "system.h": "c",
+        "unistd.h": "c",
+        "kernel.h": "c",
+        "head.h": "c",
+        "sched.h": "c",
+        "signal.h": "c",
+        "mm.h": "c",
+        "segment.h": "c"
+    }
+}
