@@ -31,7 +31,7 @@ int read_pipe(struct m_inode * inode, char * buf, int count)
 	int chars, size, read = 0;
 
 	while (count>0) {
-		// 若当前管道中没有数据(size=0)，则唤醒等待该节点的进程
+		// 若当前管道中没有数据(size=0)，则唤醒等待该节点的进程（写进程 ）
 		// 注意这里的size计算方法和write_pipe函数不一样，这里直接就是PIPE_SIZE，因为“读只能读未读的且已写入的数据”
 		while (!(size=PIPE_SIZE(*inode))) {
 			wake_up(&inode->i_wait);

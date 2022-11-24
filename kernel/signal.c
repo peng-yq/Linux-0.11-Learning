@@ -12,11 +12,13 @@
 
 volatile void do_exit(int error_code);
 
+// 获取当前任务信号屏蔽位图（屏蔽码）
 int sys_sgetmask()
 {
 	return current->blocked;
 }
 
+// 设置新的信号屏蔽位图。SIGKILL 不能被屏蔽。返回值是原信号屏蔽位图
 int sys_ssetmask(int newmask)
 {
 	int old=current->blocked;
@@ -24,6 +26,7 @@ int sys_ssetmask(int newmask)
 	current->blocked = newmask & ~(1<<(SIGKILL-1));
 	return old;
 }
+
 
 static inline void save_old(char * from,char * to)
 {

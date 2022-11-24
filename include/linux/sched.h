@@ -127,7 +127,7 @@ struct task_struct {
 	long state;	/* -1 unrunnable, 0 runnable, >0 stopped */
 	long counter;
 	long priority;
-	long signal;
+	long signal;  // 信号位图，long(32位)，每一位表示一种信号，可表示32种信号，但这里只用了22种
 	struct sigaction sigaction[32];
 	long blocked;	/* bitmap of masked signals */
 /* various fields */

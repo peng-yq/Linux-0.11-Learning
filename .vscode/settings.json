@@ -9,6 +9,9 @@
         "mm.h": "c",
         "segment.h": "c",
         "string.h": "c",
-        "stat.h": "c"
+        "stat.h": "c",
+        "sys.h": "c",
+        "fdreg.h": "c",
+        "io.h": "c"
     }
 }
